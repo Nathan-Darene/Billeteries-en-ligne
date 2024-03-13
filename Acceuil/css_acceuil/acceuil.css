@@ -1,0 +1,356 @@
+/* Réinitialisation des styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* Style du corps de la page */
+body {
+  background-color: #cdcccc;
+  overflow-x: hidden;
+}
+
+/* Style de l'en-tête de la page */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 5%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Style du logo */
+.kali {
+  width: 100px;
+  margin-left: -10%;
+}
+
+.linux {
+  font-size: 20px;
+  /*margin-right: 36rem;*/
+}
+
+.logo {
+  font-size: 25px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  cursor: pointer;
+}
+
+/* Style des liens de navigation */
+.navbar a {
+  display: inline-block;
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  animation: slideTop .8s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+/* Style des liens de navigation au survol */
+.navbar a:hover,
+.navbar a.active {
+  color: #1743e3;
+}
+
+/* Style des icônes de médias sociaux */
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 40px;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  animation: slideSci .8s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+  border-color: rgb(255, 255, 255);
+}
+
+.social-media a i {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transform: rotate(-45deg);
+}
+
+/* Style de la section d'accueil */
+.home {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5% 0;
+}
+
+/* Style du contenu de la section d'accueil */
+.home-content {
+  max-width: 630px;
+}
+
+.home-content h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Style des sous-titres de la section d'accueil */
+.h3 {
+  font-size: 40px;
+  color: #1743e3;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+/* Style des paragraphes de la section d'accueil */
+p {
+  font-size: 16px;
+  margin: 15px 0 30px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* Style des boutons */
+button a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #1743e3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .5s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+
+/* Animation pour les icônes au survol */
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+/* Effets visuels au survol des boutons */
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f8f8f8;
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+button:hover::before,
+button:hover::after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1),
+    opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button:hover::before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+button:hover::after {
+  transform: translate(50%, 0) scale(1.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* Style de l'image d'accueil */
+.home-img {
+  position: relative;
+  right: -7%;
+  width: 450px;
+  height: 450px;
+  transform: rotate(45deg);
+}
+
+/* Style de la zone autour de l'image */
+.home-img .zone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  border: 25px solid #1743e3;
+  box-shadow: 15px -15px 15px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.home-img .zone3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  border: 25px solid #1743e3;
+  box-shadow: 15px -15px 15px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* Style de l'image à l'intérieur de la zone */
+.home-img .zone img {
+  position: relative;
+  top: -120px;
+  left: -380px;
+  max-width: 650;
+  transform: rotate(-45deg);
+  /*animation: joueur 1s ease forwards;
+  animation-delay: 2s;*/
+
+}
+
+/* Style de la deuxième zone de la section d'accueil */
+.home .zone2 {
+  position: absolute;
+  top: -40%;
+  right: -25%;
+  width: 700px;
+  height: 700px;
+  background: #1743e3;
+  transform: rotate(-45deg);
+  z-index: -1;
+  opacity: 0;
+  animation: zone2 1s ease forwards;
+}
+
+/* Keyframes pour les animations */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideSci {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) rotate(45deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(45deg);
+  }
+}
+
+@keyframes zone2 {
+  0% {
+    opacity: 0;
+    /*transform: translateY(100px);*/
+    right: -40%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0, 0) scale(0) (-45deg);
+    /*right: -25%;*/
+  }
+}
+
+
+/*Footer*/
+
+.footer{
+  position: relative;
+  width: 100%;
+  background: #1743e3;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+}

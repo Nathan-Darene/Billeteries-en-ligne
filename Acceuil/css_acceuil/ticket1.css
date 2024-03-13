@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Courgette&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #bdbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de l'en-tête de la page */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  padding: 30px 5%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Style du logo */
+.kali {
+  width: 100px;
+  margin-left: -10%;
+}
+
+.linux {
+  font-size: 20px;
+  /*margin-right: 36rem;*/
+}
+
+.logo {
+  font-size: 25px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  cursor: pointer;
+}
+
+/* Style des liens de navigation */
+.navbar a {
+  display: inline-block;
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  animation: slideTop .8s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+/* Style des liens de navigation au survol */
+.navbar a:hover,
+.navbar a.active {
+  color: #1743e3;
+  transform: scale(1.2);
+}
+
+/* Style des icônes de médias sociaux */
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 40px;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  animation: slideSci .8s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover {
+  border-color: rgb(255, 255, 255);
+}
+
+.social-media a i {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transform: rotate(-45deg);
+}
+
+.fa-reply {
+  text-decoration: none;
+  color: #000;
+  transition: 1s;
+}
+
+.fa-reply:hover{
+  transition: 1s;
+  transform: scale(1.5);
+}
+
+.courgette-regular {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  font-family: 'courgette', cursive;
+  max-width: 800px;
+  padding: 20px;
+  margin: 50px auto;
+  /*width: 140px;*/
+  /*height: 40px;*/
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #77530a, #ffd277, #bd820d, #bd820d,#ffd277, #77530a);
+  /*background-size: 250%;*/
+  background-position: left;
+  /*color: #ffd277;*/
+  /*position: relative;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  justify-content: center;
+  /*cursor: pointer;*/
+  transition-duration: 1s;
+  overflow: hidden;
+  /*background-color: #fff;
+  border-radius: 20px;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/*
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition-duration: .2s;
+  background-color: #0bcf05;
+  /*transform: scale(.98);
+}
+
+*/

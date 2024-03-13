@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="../css_acceuil/page.css"-->
+    <link rel="stylesheet" href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/Billeterie/IMAGE/1/107-1077742_kali-linux-kali-linux-logo-png-clipart.svg">
+    <link rel="stylesheet" href="../css_acceuil/achat1.css">
+    <title>Kali | Billeterie Achat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Exemple de schéma interactif statique
+            $('.seat').click(function() {
+                $(this).toggleClass('selected');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../page_acceuil/billetterie.html#event"><i class="fa-solid fa-reply"></i></a>
+        <h1>Processus d'Achat du ticket pour l'événement</h1>
+        <h2>Rencontre: </h2>
+        <!--Affiche la rencontre ici-->
+        <p>Date et heure du match: <!--Affiche la date ici--></p>
+        <p>Nom du stade et emplacement: <!--Et le stade de la rencontre ici-->></p>
+
+        <h2>Sélectionnez la gatégorie de votre billet: </h2>
+        <select id="category">
+        <option value="vip">VIP</option>
+        <option value="commun">Commun</option>
+        <option value="standard">Standard</option>
+        </select>
+
+        <h2>Sélectionnez votre bloc :</h2>
+        <select id="block">
+        <option value="A">Bloc A</option>
+        <option value="B">Bloc B</option>
+        <option value="C">Bloc C</option>
+        <option value="D">Bloc D</option>
+        </select>
+        <div>
+            <img class="img" src="/Billeterie/IMAGE/stade.png"></div>
+        <div >
+            <h2 class="pace">Sélectilonnez votre pace</h2>
+        </di>
+
+        <button> <a href="../page_acceuil/siege.html">Sélectilonnez</a></button>
+        
+        <button onclick="window.location.href='ticket.html' ">Continuer vers la validation</button>
+    </div>
+</body>
+</html>

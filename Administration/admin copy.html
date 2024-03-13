@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet"
+        href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Administration/admin.css">
+    <title>KaliCore labs | Administration</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../Administration/kalicore labs.png" alt="">
+                    <h1>KaliCore labs</h1>
+                </div>
+                <ul>
+                    <li><a href="#" id="usersLink">
+                            <i class="fas fa-user"></i>
+                            <span class="nav-item">Client</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-ticket"></i>
+                            <span class="nav-item">Billeteries</span </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="fas fa-tasks"></i>
+                            <span class="nav-item">Tache</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span class="nav-item">Paramètre</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="fas fa-question-circle"></i>
+                            <span class="nav-item">Aide</span>
+                        </a>
+                    </li>
+                    <li><a href="#" class="logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="nav-item">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="main">
+            <div class="main-top">
+                <p>PANEAUX DE CONTROLE ADNISTRATEUR</p>
+            </div>
+            <div class="main-body">
+                <h1>Tableau de bord</h1>
+
+                <div class="search_bar">
+                    <input type="search" placeholder="Recherche...">
+                    <select name="" id="">
+                        <option>Category</option>
+                        <option value="VIP">VIP</option>
+                        <option value="standar">standar</option>
+                        <option value="commun">commun</option>
+                    </select>
+                    <select class="filter">
+                        <option>Filtrer pas </option>
+                        <option>Nom</option>
+                        <option>Date</option>
+                        <option>sièges</option>
+                    </select>
+                    <select class="filter">
+                        <option>Filtrer</option>
+                        <option>Bloc A</option>
+                        <option>Bloc B</option>
+                        <option>Bloc C</option>
+                        <option>Bloc D</option>
+                    </select>
+                </div>
+
+
+                <div class="row">
+                    <p>Personnes inscrite : <span><!--Personnes inscrite-->400</span> Personnes</p>
+                    <a href="#">voir tout</a>
+                </div>
+
+                <!-- Conteneur pour afficher la liste des utilisateurs -->
+                <div id="userList"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JavaScript pour afficher la liste des utilisateurs -->
+    <script>
+        // Sélectionner le lien "Utilisateurs"
+        const usersLink = document.getElementById('usersLink');
+
+        // Ajouter un écouteur d'événements pour détecter le clic sur le lien "Utilisateurs"
+        usersLink.addEventListener('click', () => {
+            // Récupérer le conteneur de la liste des utilisateurs
+            const userList = document.getElementById('userList');
+
+            // Exemple de liste d'utilisateurs (vous devrez remplacer cela par votre propre logique de récupération des utilisateurs)
+            const users = ['Utilisateur 1', 'Utilisateur 2', 'Utilisateur 3', 'Utilisateur 4', 'Utilisateur 5'];
+
+            // Effacer le contenu précédent du conteneur
+            userList.innerHTML = '';
+
+            // Boucle à travers la liste des utilisateurs et les ajouter au conteneur
+            users.forEach(user => {
+                const userItem = document.createElement('div');
+                userItem.textContent = user;
+                userList.appendChild(userItem);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Metadonnées, feuilles de style, etc. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--link rel="stylesheet" href="../css_acceuil/page.css"-->
+    <link rel="stylesheet" href="../css_acceuil/ticket1.css" />
+    <link rel="stylesheet" href="../css_acceuil/ticket.css">
+    <link rel="stylesheet" href="/Billeterie/Acceuil/css_acceuil/popup.css">
+    <link rel="icon" href="/Billeterie/IMAGE/1/107-1077742_kali-linux-kali-linux-logo-png-clipart.svg" />
+    <title>Kali | Billeterie Ticket</title>
+</head>
+
+<body>
+    <header class="header">
+        <div lass="logo-container>
+            <a href="#" class="logo"></a>
+            <p class="linux">Kali | Billeterie</p>
+        </div>
+        <nav class="navbar">
+            <a href="../page_acceuil/billetterie.html" style="--i:1;" ><i class="fa-solid fa-home"></i> Acceuil</a>
+            <a href="../page_acceuil/billetterie.html#event" style="--i:3;"> <i class="fa-solid fa-medal"></i> Evenement</a>
+        </nav>
+
+    </header>
+    <div class="container">
+        <a href="../page_acceuil/achat.html"><i class="fa-solid fa-reply"></i></a>
+        <h1> Votre Billet</h1>
+        <div class="image-container"></div>
+        <p>Macht : <span></span></p>
+        <p>Catégorie du billet : <span id="ticket-category"></span></p>
+        <p>Bloc : <span id="ticket-block"></span></p>
+        <p>Place : <span id="ticket-seat"></span></p>
+        <p>Prix : <span id="ticket-price"></span></p>
+
+        <center><button class="Btn" onclick="validateTicket()">Valider le billet</button></center>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-contenu">
+            <span class="close" onclick="fermerPopup()">&times;</span>
+            <p>Billet validé avec succès !</p>
+            <p>E-mail envoyé à : </p>
+            <button class="bottone5" onclick="fermerPopup()">Fermer</button>
+        </div>
+    </div>
+
+    <script src="../js_acceuil/confirm.js"></script>
+</body>
+
+</html>
