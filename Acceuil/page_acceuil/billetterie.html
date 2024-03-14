@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Chargement des fichiers CSS -->
-    <link rel="stylesheet" href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet"
+        href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css_acceuil/billeterie.css">
@@ -24,7 +25,8 @@
             <!-- Logo -->
             <div class="tooltip-container">
                 <span class="tooltip">KaliCore Labs</span>
-                <img src="/Billeterie/IMAGE/1/107-1077742_kali-linux-kali-linux-logo-png-clipart.png" class="baniere_icons">
+                <img src="/Billeterie/IMAGE/1/107-1077742_kali-linux-kali-linux-logo-png-clipart.png"
+                    class="baniere_icons">
             </div>
             <!-- Liens de navigation -->
             <ul>
@@ -58,7 +60,7 @@
                 </div-->
             </i>
             <!-- Informations sur les équipes -->
-            <button>
+            <button class="info">
                 <span>info sur les equipes</span><img src="../IMAGE/click_collect.png">
             </button>
         </nav>
@@ -67,11 +69,17 @@
 
     <!-- Section "home" -->
     <section class="home">
-        <button>
-            <span>
-                <a href="../page_acceuil/achat.html">reservez vos ticket maintenant!</a>
-            </span>
-        </button>
+        <form action="save_event.php" method="post">
+            <input type="hidden" name="nom" placeholder="ASEC Mimosas VS Africa Sports">
+            <input type="hidden" name="date" placeholder="2024-3-2 18:00:00">
+            <input type="hidden" name="equipe_local" value="ASEC Mimosas">
+            <input type="hidden" name="equipe_visiteur" value="Africa Sports">
+            <input type="hidden" name="lieu" value="Stade Felix Houphouet Boigny, Abidjan">
+            <button class="info">
+                <span>
+                    <a>reservez vos ticket maintenant!</a>
+                </span>
+            </button>
 
     </section>
     <!-- Fin de la section "home" -->
@@ -82,35 +90,56 @@
         <div class="event-list">
             <!-- Contenu des événements -->
             <!-- événements 1-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/events/Diapositive2.JPG"></a>
-                <h5>20 Mars, 2024 à 14h40</h5>
-                <h3>SEWE SPORT VS STADE D'ABIDJAN</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade Laurent Pokou <br> San Pedro</p>
-                </div>
-            </div>
+            <form class="box" action="save_event.php" method="post">
+                <input type="hidden" name="nom" value="SEWE SPORT VS STADE D'ABIDJAN">
+                <input type="hidden" name="equipe_local" value="SEWE SPORT">
+                <input type="hidden" name="equipe_visiteur" value="STADE D'ABIDJAN">
+                <input type="hidden" name="date_evenement" value="2024-03-20 14:40:00">
+                <input type="hidden" name="lieu" value="Stade Laurent Pokou, San Pedro">
+                <button type="submit" class="submit">
+                    <img src="/Billeterie/IMAGE/events/Diapositive2.JPG">
+                    <h5>20 Mars, 2024 à 14h40</h5>
+                    <h3>SEWE SPORT VS STADE D'ABIDJAN</h3>
+                    <div>
+                        <i class="fa-solid fa-futbol"></i>
+                        <p>Stade Laurent Pokou <br> San Pedro</p>
+                    </div>
+                </button>
+            </form>
             <!-- événements 2-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/events/Diapositive1.JPG"></a>
-                <h5>22 Mars, 2024 à 16h30</h5>
-                <h3>Racing club d'Abidjan VS Onze Frère de Bassam</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade Charle Konan Banni <br> Yamoussoukro</p>
-                </div>
-            </div>
+            <form class="box" action="save_event.php" method="post">
+                <input type="hidden" name="nom" value="Racing club d'Abidjan VS Onze Frère de Bassam">
+                <input type="hidden" name="epuipe_local" value="Racing club d'Abidjan">
+                <input type="hidden" name="epuipe_visiteur" value="Onze Frère de Bassam">
+                <input type="hidden" name="date_evenement" value="2024-03-22 16:30:00">
+                <input type="hidden" name="lieu" value="Stade Charle Konan Banni, Yamoussoukro">
+                <button type="submit" class="submit">
+                    <img src="/Billeterie/IMAGE/events/Diapositive1.JPG">
+                    <h5>22 Mars, 2024 à 16h30</h5>
+                    <h3>Racing club d'Abidjan VS Onze Frère de Bassam</h3>
+                    <div>
+                        <i class="fa-solid fa-futbol"></i>
+                        <p>Stade Charle Konan Banni <br> Yamoussoukro</p>
+                    </div>
+                </button>
+            </form>
             <!-- événements 3-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/events/Diapositive3.JPG"></a>
-                <h5> 30 Mars, 2024 à 14h30</h5>
-                <h3>SC Gagnoa VS AS Tanda</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade Amadou Gon Coulibaly <br> Korhogo</p>
-                </div>
-            </div>
+            <form class="box" action="save_event.php" method="post">
+                <input type="hidden" name="nom" value="SC Gagnoa VS AS Tanda">
+                <input type="hidden" name="equipe_local" value="SC Gagnoa">
+                <input type="hidden" name="equipe_visiteur" value="AS Tanda">
+                <input type="hidden" name="date_evenement" value="2024-03-30 14:30:00">
+                <input type="hidden" name="lieu" value="Stade Amadou Gon Coulibaly, Korhogo">
+                <button type="submit" class="submit">
+                    <img src="/Billeterie/IMAGE/events/Diapositive3.JPG">
+                    <h5> 30 Mars, 2024 à 14h30</h5>
+                    <h3>SC Gagnoa VS AS Tanda</h3>
+                    <div>
+                        <i class="fa-solid fa-futbol"></i>
+                        <p>Stade Amadou Gon Coulibaly <br> Korhogo</p>
+                    </div>
+                </button>
+                </>
         </div>
     </section>
     <!-- Fin de la section "event" -->
@@ -121,35 +150,56 @@
         <div class="event-list">
             <!-- Contenu des autres événements -->
             <!-- événements 4-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/events/Diapositive5.JPG"></a>
-                <h5>31 Mars, 2024 à 20h00</h5>
-                <h3>Stella club VS S.O de l'Armée</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade de la Paix  <br> Bouaké</p>
-                </div>
-            </div>
-            <!-- événements 5-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/ma.png"></a>
-                <h5>20 Mars, 2024 à 14h40</h5>
-                <h3>AS Tanda VS STADE ASEC Mimosas</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade Félix Houphouet <br> San Pedro</p>
-                </div>
-            </div>
-            <!-- événements 6-->
-            <div class="box">
-                <a href="../page_acceuil/achat.html"><img src="/Billeterie/IMAGE/events/m2.PNG"></a>
-                <h5>6 Avril, 2024 à 14h30</h5>
-                <h3>FC Lion Start VS L'Etoile D'Or</h3>
-                <div>
-                    <i class="fa-solid fa-futbol"></i>
-                    <p>Stade Laurent Pokou <br> San Pedro</p>
-                </div>
-            </div>
+            <form class="box" action="save_event.php" method="post">
+                <input type="hidden" name="nom" value="Stella club VS S.O de l'Armée">
+                <input type="hidden" name="equipe_local" value="Stella club">
+                <input type="hidden" name="equipe_visiteur" value="S.O de l'Armée">
+                <input type="hidden" name="date_evenement" value="2024-03-31 20:00:00">
+                <input type="hidden" name="lieu" value="Stade de la Paix, Bouaké">
+                <button type="submit" class="submit">
+                    <img src="/Billeterie/IMAGE/events/Diapositive5.JPG">
+                    <h5>31 Mars, 2024 à 20h00</h5>
+                    <h3>Stella club VS S.O de l'Armée</h3>
+                    <div>
+                        <i class="fa-solid fa-futbol"></i>
+                        <p>Stade de la Paix <br> Bouaké</p>
+                    </div>
+                </button>
+                </>
+                <!-- événements 5-->
+                <form class="box" action="save_event.php" method="post">
+                    <input type="hidden" name="nom" value="AS Tanda  VS L'Etoile D'Or">
+                    <input type="hidden" name="equipe_local" value="FC Lion Start">
+                    <input type="hidden" name="equipe_visiteur" value="ASEC Mimosas">
+                    <input type="hidden" name="date_evenement" value="2024-03-20 14:30:00">
+                    <input type="hidden" name="lieu" value="Stade Félix Houphouet, Abidjan">
+                    <button type="submit" class="submit">
+                        <img src="/Billeterie/IMAGE/ma.png">
+                        <h5>20 Mars, 2024 à 14h40</h5>
+                        <h3>AS Tanda VS ASEC Mimosas</h3>
+                        <div>
+                            <i class="fa-solid fa-futbol"></i>
+                            <p>Stade Félix Houphouet <br> Abidjan</p>
+                        </div>
+                    </button>
+                </form>
+                <!-- événements 6-->
+                <form class="box" action="save_event.php" method="post">
+                    <input type="hidden" name="nom" value="FC Lion Start VS L'Etoile D'Or">
+                    <input type="hidden" name="equipe_local" value="FC Lion Start">
+                    <input type="hidden" name="equipe_visiteur" value="L'Etoile D'Or">
+                    <input type="hidden" name="date_evenement" value="2024-03-20 14:30:00">
+                    <input type="hidden" name="lieu" value="Stade Laurent Pokou, San Pedro">
+                    <button type="submit" class="submit">
+                        <img src="/Billeterie/IMAGE/events/m2.PNG">
+                        <h5>6 Avril, 2024 à 14h30</h5>
+                        <h3>FC Lion Start VS L'Etoile D'Or</h3>
+                        <div>
+                            <i class="fa-solid fa-futbol"></i>
+                            <p>Stade Laurent Pokou <br> San Pedro</p>
+                        </div>
+                    </button>
+                    </>
         </div>
     </section>
     <!-- Fin de la section "Autres événements" -->

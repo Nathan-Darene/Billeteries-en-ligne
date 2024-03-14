@@ -35,7 +35,7 @@ header {
     margin-left: -10%;
 }
 
-button img {
+.info img {
     width: 20px;
     margin-left: 10px;
 }
@@ -84,7 +84,7 @@ button img {
     margin-right: 20px;
 }
 
-button {
+.info {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -98,21 +98,21 @@ button {
     transition: 0.2s ease-out;
 }
 
-button span {
+.info span {
     font-family: 'Anton', sans-serif;
     font-size: 15px;
     width: 100%;
     text-align: center;
 }
 
-button div {
+.info div {
     font-family: 'Anton', sans-serif;
     font-size: 15px;
     width: 100%;
     text-align: center;
 }
 
-button span a{
+.info span a {
     text-decoration: none;
     font-family: 'Anton', sans-serif;
     font-size: 15px;
@@ -122,45 +122,49 @@ button span a{
 
 }
 
-button div a {
+.info div a {
     text-decoration: none;
     font-family: 'Anton', sans-serif;
     font-size: 15px;
     width: 100%;
     text-align: center;
-    color:#f7a800;
+    color: #f7a800;
 }
 
-button:hover {
+.info:hover {
     transform: scale(1.06);
 }
 
 ul li a {
-    font-family:'Anton',sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 
-.acc:hover{
+.acc:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
 
-.app:hover{
+.app:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
 
-.fa-user-check{
+.fa-user-check {
     cursor: pointer;
     position: relative;
     padding: 20px;
 }
+
 .fa-house {
     cursor: pointer;
 }
-.fa-user-check,.fa-house:hover{
+
+.fa-user-check,
+.fa-house:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
+
 /*
 .login {
     position: absolute;
@@ -228,11 +232,11 @@ hr{
 .fa-user-check:hover .login {
     display: flex;
 }*/
-.fa-cart-arrow-down{
+.fa-cart-arrow-down {
     cursor: pointer;
 }
 
-.fa-cart-arrow-down:hover{
+.fa-cart-arrow-down:hover {
     transform: scale(1.5);
     transition: 0.5s ease-in-out;
 }
@@ -240,17 +244,17 @@ hr{
 .shop {
     text-decoration: none;
     color: black;
-    font-family:'Anton',sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 
-.shop:hover{
+.shop:hover {
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
 }
 
 
 /* Home page */
-.home{
+.home {
     margin-top: 80px;
     background-image: url(/Billeterie/IMAGE/Présentation3.png);
     background-position: center;
@@ -266,7 +270,7 @@ hr{
 
 /*event*/
 
-.event{
+.event {
     margin: 50px;
     padding: 0 10px;
 }
@@ -286,12 +290,12 @@ h1 {
 }
 
 
-.event-list{
+.event-list {
     display: flex;
     justify-content: space-between;
 }
 
-.event-list img{
+.event-list img {
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
     width: 350px;
     border-radius: 10px;
@@ -302,10 +306,11 @@ h3 {
     text-transform: uppercase;
     font-size: 20px;
 }
+
 .stade {
     text-transform: none;
     font-size: 15px;
-} 
+}
 
 .event-list .box {
     transition: 0.5s ease-out;
@@ -318,11 +323,11 @@ h3 {
 }
 
 /* fidelity prog */
-.fidelity_prog{
+.fidelity_prog {
     margin: 35px 0;
     height: 350px;
     width: 100%;
-    background-image:url(../IMAGE/pexels-photo-1.webp) ;
+    background-image: url(../IMAGE/pexels-photo-1.webp);
     background-position: center;
     background-size: cover;
     padding: 20px 10%;
@@ -346,13 +351,13 @@ h3 {
 
 }
 
-.little-food img{
+.little-food img {
     width: 220px;
 
 }
 
 .little-food_box {
-    margin: 50px 0 ;
+    margin: 50px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -360,7 +365,7 @@ h3 {
 
 }
 
-.little-food_box .box{
+.little-food_box .box {
     background-color: #fbf5ee;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     border-radius: 18px;
@@ -381,8 +386,8 @@ footer {
     padding: 25px 10%;
 }
 
-footer p{
-font-size: 15px;
+footer p {
+    font-size: 15px;
 }
 
 .icons_social {
@@ -394,14 +399,14 @@ font-size: 15px;
     font-size: 20px;
 }
 
-footer img{
+footer img {
     margin-top: 20px;
     border: 1px solid white;
     height: 50px;
     cursor: pointer;
 }
 
-footer img:last-child{
+footer img:last-child {
     margin-left: 10px;
 
 }
@@ -422,7 +427,7 @@ footer .div2 ul {
     flex-direction: column;
 }
 
-footer .div2 ul a{
+footer .div2 ul a {
     font-size: 13px;
     color: white;
     text-decoration: none;
@@ -430,26 +435,26 @@ footer .div2 ul a{
     transition: 0.5s;
 }
 
-footer .div2 ul a:hover{
+footer .div2 ul a:hover {
     letter-spacing: 0.5px;
 }
 
-.div3 img{
-    border:none;
+.div3 img {
+    border: none;
 }
 
-.footer{
+.footer {
     font-size: 13px;
     text-align: center;
 }
 
-.footer{
+.footer {
     font-size: 12px;
     color: #999;
     margin-top: 10px;
 }
 
-.fa-headset{
+.fa-headset {
     display: flex;
 }
 
@@ -463,13 +468,13 @@ footer .div2 ul a:hover{
     transition: all 0.2s;
     padding: 0.7em 1.8em;
     border-radius: 10px;
-  }
-  
-  .tooltip-container > * {
+}
+
+.tooltip-container>* {
     border-radius: 10px;
-  }
-  
-  .tooltip {
+}
+
+.tooltip {
     position: absolute;
     width: 8rem;
     top: 1rem;
@@ -480,9 +485,9 @@ footer .div2 ul a:hover{
     pointer-events: none;
     transition: all 0.4s;
     background: linear-gradient(-100deg, #9b40fc, #0acbec);
-  }
-  
-  .tooltip::before {
+}
+
+.tooltip::before {
     position: absolute;
     content: "";
     height: 0.6em;
@@ -492,12 +497,20 @@ footer .div2 ul a:hover{
     transform: translate(-50%) rotate(045deg);
     background: #4b5ef1;
     box-shadow: 0px 0px 7px #0acbec;
-  }
-  
-  .tooltip-container:hover .tooltip {
+}
+
+.tooltip-container:hover .tooltip {
     top: 120%;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-  }
-  
+}
+
+.submit {
+    border: none;
+    /* Supprime les contours */
+    padding: 0;
+    /* Supprime le remplissage */
+    background-color: transparent;
+    /* Arrière-plan transparent */
+}

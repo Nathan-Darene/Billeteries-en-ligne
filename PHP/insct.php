@@ -8,30 +8,28 @@ $basededonnees = "billeteries";
 // Connexion à la base de données MySQL
 $connexion = new mysqli($serveur, $utilisateur, $motdepasse, $basededonnees);
 
-
-// Vérification de la connexion
+// Vérifier la connexion
 if ($connexion->connect_error) {
-    die("Échec de la connexion à la base de données: " . $connexion->connect_error);
+    die("La connexion a échoué : " . $connexion->connect_error);
 }
 
 // Récupérer et nettoyer les données du formulaire
 $nom = mysqli_real_escape_string($connexion, $_POST['nom']);
-$equipe_local = mysqli_real_escape_string($connexion, $_POST['equipe_local']);
-$equipe_visiteur = mysqli_real_escape_string($connexion, $_POST['equipe_visiteur']);
-$date_evenement = mysqli_real_escape_string($connexion, $_POST['date']);
-$lieu = mysqli_real_escape_string($connexion, $_POST['lieu']);
+$prenom = mysqli_real_escape_string($connexion, $_POST['prenom']);
+$email = mysqli_real_escape_string($connexion, $_POST['email']);
+$motdepasse = mysqli_real_escape_string($connexion, $_POST['motdepasse']);
 
 // Requête d'insertion des données dans la table appropriée
-$sql = "INSERT INTO machts (nom, equipe_local, equipe_visiteur, Dateheure_Machts, stade) VALUES ('$nom', '$equipe_local', '$equipe_visiteur', '$date_evenement', '$lieu')";
+$sql = "INSERT INTO utilisateur (Nom, Prenom, Adresse_Email, mots_passe) VALUES ('$nom', '$prenom', '$email', '$motdepasse')";
 
+// Exécuter la requête
 if ($connexion->query($sql) === TRUE) {
-    // Rediriger vers la page d'achat
-    header("Location: achat.php");
+    // Rediriger vers la page de connexion
+    header("Location: connexion.php");
     exit();
 } else {
     echo "Erreur lors de l'insertion des données : " . $connexion->error;
 }
-
 
 // Fermer la connexion à la base de données
 $connexion->close();
