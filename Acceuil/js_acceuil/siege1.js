@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedSeatNumbers = Array.from(selectedSeats).map(seat => seat.textContent);
         alert('Place sélectionnée : No ' + selectedSeatNumbers.join(', '));
         // Rediriger vers la page d'achat uniquement si des places sont sélectionnées
-        window.location.href = "../page_acceuil/achat.html";
+        window.location.href = "../page_acceuil/achat.html#place";
     });
 });

@@ -29,16 +29,33 @@ body {
     background-color: #f0f0f0;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     margin: 10px 0;
 }
 
-#category, #block {
-    width: 10%;
-    padding: 10px;
-    font-size: 20px;
+.category,
+.block {
+    width: 5%;
+    padding: 5px;
+    font-size: 50px;
     text-align: center;
     cursor: pointer;
+}
+
+select {
+    max-width: 200px;
+    /* Définissez la largeur maximale pour les sélecteurs */
+}
+
+option {
+    overflow: hidden;
+    /* Cachez le texte qui dépasse */
+    white-space: nowrap;
+    /* Empêchez le texte de se retourner à la ligne */
+    text-overflow: ellipsis;
+    /* Ajoutez des points de suspension pour indiquer le texte coupé */
 }
 
 /*div {
@@ -47,7 +64,7 @@ h1, h2, p {
 .place {
     text-align: center;
     margin-bottom: 20px;
-    }
+}
 
 
 

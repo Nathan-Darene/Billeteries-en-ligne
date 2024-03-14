@@ -20,8 +20,16 @@ h2 {
     text-align: center;
 }
 
+.choix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category, .block{
+        text-align: center;
+}
 select {
-    width: 100%;
+    width: 40%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -31,7 +39,9 @@ select {
     background-color: #f9f9f9;
 }
 
+
 button {
+    text-align: center;
     display: block;
     width: 100%;
     padding: 10px;

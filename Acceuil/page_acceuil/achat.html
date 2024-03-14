@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link rel="stylesheet" href="../css_acceuil/page.css"-->
-    <link rel="stylesheet" href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet"
+        href="/media/nathan/Expansion/MES PROJETS WEB/Burger_king/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="/Billeterie/IMAGE/1/107-1077742_kali-linux-kali-linux-logo-png-clipart.svg">
     <link rel="stylesheet" href="../css_acceuil/achat1.css">
     <title>Kali | Billeterie Achat</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Exemple de schéma interactif statique
-            $('.seat').click(function() {
+            $('.seat').click(function () {
                 $(this).toggleClass('selected');
             });
         });
@@ -27,31 +30,42 @@
         <h2>Rencontre: </h2>
         <!--Affiche la rencontre ici-->
         <p>Date et heure du match: <!--Affiche la date ici--></p>
-        <p>Nom du stade et emplacement: <!--Et le stade de la rencontre ici-->></p>
+        <p>Nom du stade et emplacement: <!--Et le stade de la rencontre ici--></p>
 
         <h2>Sélectionnez la gatégorie de votre billet: </h2>
-        <select id="category">
-        <option value="vip">VIP</option>
-        <option value="commun">Commun</option>
-        <option value="standard">Standard</option>
-        </select>
-
+        <div class="choix">
+            <select class="category" id="category">
+                <option value="category">category</option>
+                <option value="vip">VIP : 15000 fcfa</option>
+                <option value="standard">Standard : 10000 fcfa</option>
+                <option value="commun">Commun : 5000 fcfa</option>
+            </select>
+        </div>
         <h2>Sélectionnez votre bloc :</h2>
-        <select id="block">
-        <option value="A">Bloc A</option>
-        <option value="B">Bloc B</option>
-        <option value="C">Bloc C</option>
-        <option value="D">Bloc D</option>
-        </select>
+        <div class="choix">
+            <select class="block" id="block">
+                <option value="A">Bloc A</option>
+                <option value="B">Bloc B</option>
+                <option value="C">Bloc C</option>
+                <option value="D">Bloc D</option>
+            </select>
+        </div>
         <div>
-            <img class="img" src="/Billeterie/IMAGE/stade.png"></div>
-        <div >
-            <h2 class="pace">Sélectilonnez votre pace</h2>
-        </di>
+            <img class="img" src="/Billeterie/IMAGE/stade.png">
+        </div>
+        <div>
+            <h2 class="pace" id="place">Sélectilonnez votre pace</h2>
+            </div>
+            <button> <a href="../page_acceuil/siege.html">Sélectilonnez</a></button>
 
-        <button> <a href="../page_acceuil/siege.html">Sélectilonnez</a></button>
-        
-        <button onclick="window.location.href='ticket.html' ">Continuer vers la validation</button>
-    </div>
+            <!--div id="qrcode">
+                <button onclick="genererQRCode()">Générer le QR code</button>
+            </!--div-->
+            <button onclick="window.location.href='ticket.html' ">Continuer vers la validation</button>
+        </div>
+
+        <script scr="/Billeterie/Acceuil/js_acceuil/QR_CODE.js"></script>
+
 </body>
+
 </html>
