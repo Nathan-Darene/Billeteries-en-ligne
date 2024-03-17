@@ -1,4 +1,4 @@
-ts/
-PHP/
-TEST/
-connexion/
+ts/**
+PHP/**
+TEST/**
+connexion/**
