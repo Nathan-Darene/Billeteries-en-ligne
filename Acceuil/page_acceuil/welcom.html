@@ -1,0 +1,27 @@
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css_acceuil/welcom.css">
+    <title>BIENVENUE</title>
+</head>
+
+<body>
+    <h1>bienvenue Mr/Mm.
+        <?php echo $_SESSION['Nom'];?>
+    </h1>
+    
+    <button><a href="billetterie.php"><h2>ok</h2></a>
+        
+    </button>
+
+</body>
+
+</html>
