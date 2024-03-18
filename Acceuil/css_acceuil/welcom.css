@@ -1,34 +1,117 @@
-body{
-    background: #1db1cf;
-    display: flex;
+/* Définition des keyframes pour l'animation du bouton */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Définition des keyframes pour l'animation du message de bienvenue */
+@keyframes welcomeAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* Application de l'animation au message de bienvenue */
+.bien {
+    animation: welcomeAnimation 0.5s ease-out;
+}
+
+
+/* Application de l'animation au survol du bouton */
+button:hover {
+    animation: pulse 0.5s ease infinite;
+}
+
+/* Styles CSS précédents restent inchangés */
+
+body {
+    background: url(/Billeterie/IMAGE/paysage.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    margin: 35px 0;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+    /* Centre le contenu horizontalement */
+    /*align-items: center;*/
+    /* Centre le contenu verticalement */
+    min-height: 100vh;
+    /* Pour occuper au moins toute la hauteur de la fenêtre */
+    margin: 0;
+    /* Supprime les marges par défaut */
 }
-* {
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
-
-
 
 h1 {
+    font-size: 36px;
     text-align: center;
-    color: #0b4f58;
+    margin-top: 50px;
 }
-a {
-    float: right;
-    background:#000000;
-    padding: 12px 15px;
-    color:#fff;
-    border-radius: 10px;
-    margin: 10px ;
-    border: none;
-    text-decoration: none;
 
-    
+button {
+    background-color: #4CAF50;
+    /* Couleur de fond du bouton */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    /* Ajout d'une bordure arrondie */
+    transition: background-color 0.3s ease;
+    /* Transition fluide pour le changement de couleur de fond */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Ombre légère */
 }
-a:hover{
-    opacity: 0.7;
+
+button:hover {
+    background-color: #45a049;
+    /* Changement de couleur de fond au survol */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* Ombre légère accentuée au survol */
+}
+
+a {
+    text-decoration: none;
+    /* Suppression du soulignement du lien */
+    color: inherit;
+    /* Utiliser la couleur par défaut pour les liens */
+}
+
+button a {
+    color: white;
+    /* Couleur du texte du bouton */
+}
+
+/* Effet de glassmorphism */
+button {
+    background: rgba(255, 255, 255, 0.2);
+    /* Couleur de fond avec transparence */
+    backdrop-filter: blur(10px);
+    /* Flou du fond */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Bordure transparente */
 }

@@ -1,98 +1,14 @@
-/*body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, p, select, button {
-    margin: 10px 0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}*/
-
-body {
+.category option {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 150vh;
-    background-color: #f0f0f0;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
 }
 
-h1,
-h2,
-p {
-    margin: 10px 0;
-}
-
-.category,
-.block {
-    width: 5%;
-    padding: 5px;
-    font-size: 50px;
-    text-align: center;
-    cursor: pointer;
-}
-
-select {
-    max-width: 200px;
-    /* Définissez la largeur maximale pour les sélecteurs */
-}
-
-option {
-    overflow: hidden;
-    /* Cachez le texte qui dépasse */
-    white-space: nowrap;
-    /* Empêchez le texte de se retourner à la ligne */
-    text-overflow: ellipsis;
-    /* Ajoutez des points de suspension pour indiquer le texte coupé */
-}
-
-/*div {
-    width: 50%;
-}*/
-.place {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-button a {
-    color: white;
-    text-decoration: none;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.img {
-    position: relative;
-    height: 500px;
-    margin-left: 50px;
-    bottom: 0;
-
-
+/* Style pour les options du deuxième menu déroulant */
+.block option {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
 }

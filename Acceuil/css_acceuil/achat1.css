@@ -1,8 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #6d9afc;
+    background-image: url(/Billeterie/IMAGE/pexels-photo-2.webp);
     margin: 0;
     padding: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    /*height: calc(150vh - 200px);*/
+    /*display: flex;*/
+    align-items: flex-end;
+    /*justify-content: center;*/
+    /*padding: 20px;*/
 }
 
 .container {
@@ -12,6 +20,19 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    /* Couleur de fond avec opacité */
+    border-radius: 10px;
+    /* Rayon des coins */
+    backdrop-filter: blur(10px);
+    /* Flou de l'arrière-plan */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Ombre douce */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Bordure */
+    opacity: 0.9;
+    /* Opacité globale */
+
 }
 
 h1,
@@ -24,11 +45,27 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
-.category, .block{
-        text-align: center;
+
+.category,
+.block{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    /* Couleur de fond avec opacité */
+    border-radius: 10px;
+    /* Rayon des coins */
+    backdrop-filter: blur(10px);
+    /* Flou de l'arrière-plan */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Ombre douce */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* Bordure */
+    opacity: 0.9;
+    /* Opacité globale */
 }
-select {
+
+select, option {
     width: 40%;
     padding: 10px;
     margin-bottom: 20px;
@@ -74,4 +111,3 @@ button:hover {
     text-align: center;
     margin-bottom: 20px;
 }
-
